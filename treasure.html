@@ -44,94 +44,124 @@
   </div>
 </br>
   <!-- container for the game grid -->
+  <!-- Picture ids are picture(row,column) so the first chest
+  in the 2 row would be "chest2,1" -->
   <div class="container">
     <div class="row">
       <div class="col-sm">
-        <img src="resources/images/chest.png" alt="chest" width="50" height="50">
+        <img id="chest1,1" src="resources/images/chest.png" onclick="check(0)" alt="chest" width="50" height="50">
       </div>
       <div class="col-sm">
-        <img src="resources/images/chest.png" alt="chest" width="50" height="50">
+        <img id="chest1,2" src="resources/images/chest.png" onclick="check(1)" alt="chest" width="50" height="50">
       </div>
       <div class="col-sm">
-        <img src="resources/images/chest.png" alt="chest" width="50" height="50">
+        <img id="chest1,3" src="resources/images/chest.png" onclick="check(2)" alt="chest" width="50" height="50">
       </div>
       <div class="col-sm">
-        <img src="resources/images/chest.png" alt="chest" width="50" height="50">
+        <img id="chest1,4" src="resources/images/chest.png" onclick="check(3)" alt="chest" width="50" height="50">
       </div>
       <div class="col-sm">
-        <img src="resources/images/chest.png" alt="chest" width="50" height="50">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm">
-        <img src="resources/images/chest.png" alt="chest" width="50" height="50">
-      </div>
-      <div class="col-sm">
-        <img src="resources/images/chest.png" alt="chest" width="50" height="50">
-      </div>
-      <div class="col-sm">
-        <img src="resources/images/chest.png" alt="chest" width="50" height="50">
-      </div>
-      <div class="col-sm">
-        <img src="resources/images/chest.png" alt="chest" width="50" height="50">
-      </div>
-      <div class="col-sm">
-        <img src="resources/images/chest.png" alt="chest" width="50" height="50">
+        <img id="chest1,5" src="resources/images/chest.png" onclick="check(4)" alt="chest" width="50" height="50">
       </div>
     </div>
     <div class="row">
       <div class="col-sm">
-        <img src="resources/images/chest.png" alt="chest" width="50" height="50">
+        <img id="chest2,1" src="resources/images/chest.png" onclick="check(5)" alt="chest" width="50" height="50">
       </div>
       <div class="col-sm">
-        <img src="resources/images/chest.png" alt="chest" width="50" height="50">
+        <img id="chest2,2" src="resources/images/chest.png" onclick="check(6)" alt="chest" width="50" height="50">
       </div>
       <div class="col-sm">
-        <img src="resources/images/help.png" alt="help" width="50" height="50">
+        <img id="chest2,3" src="resources/images/chest.png" onclick="check(7)" alt="chest" width="50" height="50">
       </div>
       <div class="col-sm">
-        <img src="resources/images/chest.png" alt="chest" width="50" height="50">
+        <img id="chest2,4" src="resources/images/chest.png" onclick="check(8)" alt="chest" width="50" height="50">
       </div>
       <div class="col-sm">
-        <img src="resources/images/chest.png" alt="chest" width="50" height="50">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm">
-        <img src="resources/images/chest.png" alt="chest" width="50" height="50">
-      </div>
-      <div class="col-sm">
-        <img src="resources/images/chest.png" alt="chest" width="50" height="50">
-      </div>
-      <div class="col-sm">
-        <img src="resources/images/chest.png" alt="chest" width="50" height="50">
-      </div>
-      <div class="col-sm">
-        <img src="resources/images/chest.png" alt="chest" width="50" height="50">
-      </div>
-      <div class="col-sm">
-        <img src="resources/images/chest.png" alt="chest" width="50" height="50">
+        <img id="chest2,5" src="resources/images/chest.png" onclick="check(9)" alt="chest" width="50" height="50">
       </div>
     </div>
     <div class="row">
       <div class="col-sm">
-        <img src="resources/images/chest.png" alt="chest" width="50" height="50">
+        <img id="chest3,1" src="resources/images/chest.png" onclick="check(10)" alt="chest" width="50" height="50">
       </div>
       <div class="col-sm">
-        <img src="resources/images/chest.png" alt="chest" width="50" height="50">
+        <img id="chest3,2" src="resources/images/chest.png" onclick="check(11)" alt="chest" width="50" height="50">
       </div>
       <div class="col-sm">
-        <img src="resources/images/chest.png" alt="chest" width="50" height="50">
+        <img id="help" src="resources/images/help.png" onclick="help()" alt="help" width="50" height="50">
       </div>
       <div class="col-sm">
-        <img src="resources/images/chest.png" alt="chest" width="50" height="50">
+        <img id="chest3,4" src="resources/images/chest.png" onclick="check(13)" alt="chest" width="50" height="50">
       </div>
       <div class="col-sm">
-        <img src="resources/images/chest.png" alt="chest" width="50" height="50">
+        <img id="chest3,5" src="resources/images/chest.png" onclick="check(14)" alt="chest" width="50" height="50">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+        <img id="chest4,1" src="resources/images/chest.png" onclick="check(15)" alt="chest" width="50" height="50">
+      </div>
+      <div class="col-sm">
+        <img id="chest4,2" src="resources/images/chest.png" onclick="check(16)" alt="chest" width="50" height="50">
+      </div>
+      <div class="col-sm">
+        <img id="chest4,3" src="resources/images/chest.png" onclick="check(17)" alt="chest" width="50" height="50">
+      </div>
+      <div class="col-sm">
+        <img id="chest4,4" src="resources/images/chest.png" onclick="check(18)" alt="chest" width="50" height="50">
+      </div>
+      <div class="col-sm">
+        <img id="chest4,5" src="resources/images/chest.png" onclick="check(19)" alt="chest" width="50" height="50">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+        <img id="chest5,1" src="resources/images/chest.png" onclick="check(20)" alt="chest" width="50" height="50">
+      </div>
+      <div class="col-sm">
+        <img id="chest5,2" src="resources/images/chest.png" onclick="check(21)" alt="chest" width="50" height="50">
+      </div>
+      <div class="col-sm">
+        <img id="chest5,3" src="resources/images/chest.png" onclick="check(22)" alt="chest" width="50" height="50">
+      </div>
+      <div class="col-sm">
+        <img id="chest5,4" src="resources/images/chest.png" onclick="check(23)" alt="chest" width="50" height="50">
+      </div>
+      <div class="col-sm">
+        <img id="chest5,5" src="resources/images/chest.png" onclick="check(24)" alt="chest" width="50" height="50">
       </div>
     </div>
   </div>
   
+  <script>
+    ids= ["chest1,1","chest1,2","chest1,3","chest1,4","chest1,5",
+          "chest2,1","chest2,2","chest2,3","chest2,4","chest2,5",
+          "chest3,1","chest3,2","help","chest3,4","chest3,5",
+          "chest4,1","chest4,2","chest4,3","chest4,4","chest4,5",
+          "chest5,1","chest5,2","chest5,3","chest5,4","chest5,5"]
+    chestCount=0
+    score=0
+    lastCheck=12
+    treasureLocation=18
+
+    function check(position)
+    {
+      id=ids[position];
+
+      if(ids[position] == ids[treasureLocation])
+      {
+        document.getElementById(id).src="resources/images/treasure.png"
+      }
+      else
+      {
+        document.getElementById(id).src="resources/images/mimic.png" 
+      }
+      chestCount++
+      score++
+    }
+    
+  </script>
   
 
   
