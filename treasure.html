@@ -159,8 +159,63 @@
       }
       chestCount++
       score++
+      lastCheck=position
+      updateText('score')
+      updateText('chests')
     }
     
+    function updateText(id)
+    {
+      if (id == 'score')
+      {
+        document.getElementById('score').textContent='Score is ' + score
+      }
+      else if (id == 'chests')
+      {
+        document.getElementById('chests').textContent='Number of chests checked is ' + chestCount
+      }
+    }
+
+    function help()
+    {
+      lastRow = lastCheck/5
+      lastCol = lastCheck%5 
+      treasureRow = treasureLocation/5
+      treasureCol = treasureLocation%5
+      if (lastRow == treasureRow && lastCol == treasureCol)
+      {
+        document.getElementById('help').textContent='Sorry, no help available'
+      }
+      else if (lastRow == treasureRow)
+      {
+        if (lastCol > treasureCol)
+        {
+          document.getElementById('help').textContent='right'
+        }
+        else if (lastCol < treasureCol)
+        {
+          document.getElementById('help').textContent='left'
+        }
+        
+      }
+      else if (lastCol == treasureCol)
+      {
+        if (lastRow > treasureRow)
+        {
+          document.getElementById('help').textContent='up'
+        }
+        else if (lastRow < treasureRow)
+        {
+          document.getElementById('help').textContent='down'
+        }
+      }     
+      else
+      {    
+        document.getElementById('help').textContent='Sorry, no help available'
+      }
+      score+=2
+      updateText('score')
+    }
   </script>
   
 
