@@ -38,8 +38,30 @@
       myTime = Date.now()
       console.log("myTime=" + myTime)
     }
-  
-  
+    
+    function startTime()
+    {
+      for(let i=0; i<4; i++)
+      {
+        setTimeout(function()
+        {
+          document.getElementById('countdown').innerHTML=i
+        }, (3-i)*1000);
+      }
+      setTimeout(() => {
+        if(myTime == undefined)
+        {
+          document.getElementById('countdown').innerHTML='Too Slow'
+        }
+        else
+        {
+          var buttonTime = Date.now()
+        }
+        diff = buttonTime - myTime
+        console.log('diff is ' + diff)
+        document.getElementById('target').innerHTML='Time was '+ diff/1000 + ' sec'
+      }, 3000);
+    }
   </script>
 
 </body>
