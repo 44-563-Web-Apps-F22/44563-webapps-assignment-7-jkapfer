@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html> <head> <style>
+<html> 
+<head> 
+	<style>
     .flex-container {
       display: flex;  flex-direction:row;
       background-color:lightcoral;
@@ -10,23 +12,21 @@
 		color:azure;
 	}
 
-.flex-container > div {  /*div children of the flex container*/
-  background-color: #f1f1f1; 
-  margin: 10px;  padding: 20px;  font-size: 30px;
-}
-
-/* Responsive layout */
-@media (max-width: 600px) { 
-	 .flex-container{
-		 flex-direction:column;
-		 background-color: green;
-	  }
+	.flex-container > div {  /*div children of the flex container*/
+	background-color: #f1f1f1; 
+	margin: 10px;  padding: 20px;  font-size: 30px;
 	}
-</style>
+
+	/* Responsive layout */
+	@media (max-width: 600px) { 
+		.flex-container{
+			flex-direction:column;
+			background-color: green;
+		}
+		}
+	</style>
 <title>Cycler?</title>
 </head>
-
-
 
 <body>
 	<h1>Jacob Kapfer builds a cycler</h1>
@@ -42,6 +42,8 @@
 	<p> Press the button to create an new element of type div and then add it to the container.
 		</p>
 		<button onclick="makeNewDiv()">Add value</button>
+		<button onclick="get()">Get</button>
+		<button onclick="spin()">Spin</button>
 	
 	
 </body>
@@ -56,7 +58,29 @@
 		/* add it to the container */
 		let container = document.getElementById('target')
 		container.appendChild(element)
-		
+	}
+
+	function get()
+	{
+		cyclerItems = document.getElementsByClassName("cycler")
+		if(cyclerItems.length > 0)
+		{
+			cyclerItems[(cyclerItems.length-1)].remove()
+		}
+	}
+
+	function spin()
+	{
+		cyclerItems = document.getElementsByClassName("cycler")
+		if(cyclerItems.length > 1)
+		{
+			let removedItem = cyclerItems[(cyclerItems.length-1)]
+			removedItem.remove()
+
+			let container = document.getElementById('target') 
+			container.insertBefore(removedItem, container.firstChild)
+		}
+
 	}
 </script>
 </html>	
