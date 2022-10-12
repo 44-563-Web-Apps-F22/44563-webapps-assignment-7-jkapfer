@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>setTimeout use</title>
+  <title>Reaction Game</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -10,28 +10,36 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
+  <h1>Jacob Kapfer reaction timer</h1>
 
-  <h2>Timeout - Red in 3 seconds</h2>
-
-  <button type="button"
-  class="btn btn-primary"
-  onclick="buttonPress2()">
-  Click me change the color.</button>
   
-  <p id="target">I will become red </p>
-  
-  <script> 
-  function buttonPress1() {
-    setTimeout(function(){
-      document.getElementById('target').style.color = "red"
-    }, 3000)
-  }
 
-  function buttonPress2() {
-    setTimeout(()=>{
-      document.getElementById('target').style.color = "red"
-    }, 3000)
-  }
+  <button type="button" class="btn btn-primary" onclick="startTime()">
+    Start Timer
+  </button>
+
+  <button type="button" class="btn btn-primary" onclick="recordReact()">
+    React Now
+  </button>
+
+  
+  <div id="target">
+    Your Time
+  </div>
+  <div id="countdown">
+    Count
+  </div>
+  
+  <script>
+    myTime = undefined
+
+    function recordReact()
+    {
+      myTime = Date.now()
+      console.log("myTime=" + myTime)
+    }
+  
+  
   </script>
 
 </body>
